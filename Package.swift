@@ -17,7 +17,9 @@ let package = Package(
     // Lottie from being embedded in the app product, causing the app to crash when
     // ran on a physical device. As a workaround, we can include a stub target
     // with at least one source file.
-    .target(name: "_LottieStub"),
+    .target(
+      name: "_LottieStub",
+      dependencies: ["Lottie"]),
     
     .testTarget(
       name: "LottieTests",
